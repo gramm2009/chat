@@ -1,24 +1,28 @@
-// import { Redirect, Route, Switch } from 'react-router-dom';
-// import { ContactsPage } from '../pages/contacts/ContactsPage';
-// import { LoginPage } from '../pages/login/LoginPage';
-// import { OptionsPage } from '../pages/options/OptionsPage';
-// import { TasksPage } from '../pages/tasks/TasksPage';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import { Home, Chat, Contact, Login, Notifications, Settings, Calendar } from "../pages";
 
-export const useRouters = (status: boolean) => {
-    if (status) {
+
+import Admin from '../layout/Admin';
+export const useRouters = ( status: boolean ) => {
+    if ( status ) {
         return (
             <Switch>
-                {/* <Route exact path="/contacts" component={ContactsPage} />
-                <Route exact path="/options" component={OptionsPage} />
-                <Route exact path="/tasks" component={TasksPage} />
-                <Redirect to="/contacts" /> */}
+                <Route exact path="/home" component={ Home } />
+                <Route exact path="/chat" component={ Chat } />
+                <Route exact path="/contact" component={ Contact } />
+                <Route exact path="/notifications" component={ Notifications } />
+                <Route exact path="/calendar" component={ Calendar } />
+                <Route exact path="/settings" component={ Settings } />
+                <Route exact path="/administrator" component={ Admin } />
+
+                <Redirect to="/administrator" />
             </Switch>
         );
     } else {
         return (
             <Switch>
-                {/* <Route exact path="/login" component={LoginPage} />
-                <Redirect to="/login" /> */}
+                <Route exact path="/login" component={ Login } />
+                <Redirect to="/login" />
             </Switch>
         );
     }

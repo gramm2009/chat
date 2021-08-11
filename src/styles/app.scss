@@ -10,14 +10,12 @@
     min-height: 100vh;
     overflow-x: hidden;
     font-family: Roboto, Arial;
+    background-color: white;
 
-    &_container {
-        max-width: 2000px;
-        background-color: rgb(236, 175, 152);
+    &-container {
+        max-width: 1920px;
+        background: linear-gradient(180deg, #F3F3FB 0%, #FDFBFD 100%);
         margin: 0 auto;
-        padding: 10px 15px 10px;
-        display: flex;
-        flex-wrap: wrap;
     }
 }
 
