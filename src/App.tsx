@@ -3,6 +3,7 @@ import './styles/app.scss';
 import StateLogin from './mobX/StateLogin';
 import { useRouters } from './router/Routers';
 import { observer } from 'mobx-react-lite';
+import Admin from './layout/Admin';
 
 
 export const App: React.FC = observer(() => {
@@ -15,7 +16,7 @@ export const App: React.FC = observer(() => {
     return (
         <div className="app">
             <div className="app-container">
-                {router}
+                <Admin/>
             </div>
         </div>
     );

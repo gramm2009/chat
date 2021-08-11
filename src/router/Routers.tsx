@@ -13,9 +13,9 @@ export const useRouters = ( status: boolean ) => {
                 <Route exact path="/notifications" component={ Notifications } />
                 <Route exact path="/calendar" component={ Calendar } />
                 <Route exact path="/settings" component={ Settings } />
-                <Route exact path="/administrator" component={ Admin } />
+                <Route exact path="/" component={ Admin } />
 
-                <Redirect to="/administrator" />
+                <Redirect to="/" />
             </Switch>
         );
     } else {

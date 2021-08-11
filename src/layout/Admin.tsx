@@ -1,8 +1,17 @@
 import React from 'react';
 import Avatar from "../../public/img/avatar.jpg"
 import '../styles/layout-admin.scss';
+import { Link } from 'react-router-dom';
+import { useRouters } from '../router/Routers';
+import StateLogin from '../mobX/StateLogin';
+import { observer } from 'mobx-react-lite';
 
-const Admin: React.FC = () => {
+
+const Admin: React.FC = observer(() => {
+    
+    // const statusLogin: boolean  = StateLogin.isLogin
+    // const router = useRouters(true)
+    
     return (
         <div className="layout-admin">
             <div className="layout-admin__container">
@@ -16,7 +25,9 @@ const Admin: React.FC = () => {
 
                     <div className="layout-admin__nav__links-box">
                         <ul>
-                            <li>
+                            
+                        <Link to="/administrator/home">
+                        <li>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="Icon/Outline/grid">
                                         <path
@@ -44,6 +55,7 @@ const Admin: React.FC = () => {
                                 </svg>
                                 home
                             </li>
+                            </Link>
                             <li>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g id="Icon/Fill/message-circle">
@@ -209,10 +221,12 @@ const Admin: React.FC = () => {
                     </div>
                 </nav>
 
-                <main className="layout-admin__main">main</main>
+                <main className="layout-admin__main">
+                    {/* {router} */} maim
+                    </main>
             </div>
         </div>
     );
-};
+});
 
 export default Admin;
