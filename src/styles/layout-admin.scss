@@ -31,6 +31,7 @@
                 background-color: blue;
                 border-radius: 50%;
                 margin-bottom: 15px;
+                overflow: hidden;
             }
 
             &__name {
@@ -68,6 +69,10 @@
 
                     &:nth-child(6) {
                         margin-bottom: 300px;
+
+                        @media (max-height:1079px) {
+                            margin-bottom: 150px;
+                        }
                     }
 
                     &:nth-child(7) {

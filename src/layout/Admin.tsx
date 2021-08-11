@@ -1,4 +1,5 @@
 import React from 'react';
+import Avatar from "../../public/img/avatar.jpg"
 import '../styles/layout-admin.scss';
 
 const Admin: React.FC = () => {
@@ -7,7 +8,9 @@ const Admin: React.FC = () => {
             <div className="layout-admin__container">
                 <nav className="layout-admin__nav">
                     <div className="layout-admin__nav__avatar-box">
-                        <div className="layout-admin__nav__avatar-box__avatar"></div>
+                        <div className="layout-admin__nav__avatar-box__avatar">
+                            <img src={Avatar} alt="" />
+                        </div>
                         <div className="layout-admin__nav__avatar-box__name">John Doe</div>
                     </div>
 
