@@ -2,15 +2,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, #F3F3FB 0%, #FDFBFD 100%);
-
-
-    &__container {
-        max-width: 1920px;
-        margin: 0 auto;
-        display: flex;
-        min-height: 100vh;
-
-    }
+    display: flex;
 
     &__nav {
         width: 290px;
@@ -43,27 +35,42 @@
         }
 
         &__links-box {
-            overflow: hidden;
-            overflow-y: auto;
 
             ul {
                 li {
-                    display: flex;
-                    align-items: center;
                     list-style-type: none;
-                    margin-bottom: 56px;
+                    margin-bottom: 43px;
                     font-size: 16px;
                     line-height: 19px;
                     text-transform: uppercase;
                     color: #707C97;
                     -webkit-user-select: none;
                     user-select: none;
+                    position: relative;
 
-                    svg {
-                        margin-right: 17px;
+                    a,
+                    &:nth-child(7) {
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
 
-                        rect {
-                            fill: #707C97;
+                        svg {
+                            margin-right: 17px;
+
+                            rect {
+                                fill: #707C97;
+                            }
+                        }
+
+                        &:hover {
+                            color: #2A8BF2;
+                            cursor: pointer;
+
+                            svg {
+                                rect {
+                                    fill: #2A8BF2;
+                                }
+                            }
                         }
                     }
 
@@ -78,19 +85,25 @@
                     &:nth-child(7) {
                         margin-bottom: 0;
                     }
-
-                    &:hover {
-                        color: #2A8BF2;
-                        cursor: pointer;
-
-                        svg {
-                            rect {
-                                fill: #2A8BF2;
-                            }
-                        }
+                }
+                
+                .checked-rout {
+                    &::before {
+                        content: '';
+                        display:inline-block;
+                        width: 3px;
+                        height: 40px;
+                        background-color: #2A8BF2;
+                        position: absolute;
+                        left: -45px;
+                        -webkit-box-shadow: 6px 0px 5px 0px rgb(11 129 219 / 20%);
+                        -moz-box-shadow: 6px 0px 5px 0px rgb(11 129 219 / 20%);
+                        box-shadow: 6px 0px 5px 0px rgb(11 129 219 / 20%);
                     }
                 }
             }
+
+
         }
     }
 }
