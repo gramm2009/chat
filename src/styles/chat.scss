@@ -1,8 +1,87 @@
+%headerTitleText{  
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: capitalize;
+    color: #707C97;
+}
+
 .chat {
     display: flex;
-    background-color: burlywood;
-    
-    .chat__chat-list{
+    justify-content: space-between;
+    background-color: rgb(202, 198, 212);
+
+    .chat__chat-list {
         margin-right: 65px;
+        background-color: burlywood;
+        flex: 0 1 600px;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            &__title {
+                h3 {
+                    font-size: 36px;
+                    line-height: 26px;
+                    letter-spacing: 0.01em;
+                    text-transform: capitalize;
+                    color: #0D1C2E;
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    @extend %headerTitleText;
+                    cursor: pointer;
+                }
+            }
+
+            &__btn {
+                background:rgba(68, 68, 218, 0.692);
+                box-shadow: 6px 6px 25px rgba(42, 139, 242, 0.15), 4px 4px 25px rgba(42, 139, 242, 0.05), 10px 6px 25px rgba(42, 139, 242, 0.15);
+                border-radius: 6px;
+                font-size: 20px;
+                line-height: 24px;
+                border: none;
+                text-align: center;
+                color: #FFFFFF;
+                transition: 0.3s;
+                padding: 18px 25px;
+                margin-bottom: 30px;
+
+                &:hover{
+                    cursor: pointer;
+                    background: #0e7ce9;
+                }
+            }
+
+            &__search {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                
+                input{
+                    display: inline-block;
+                    width: calc(100% - 111px);
+                    height: 70px;
+                    border: none;
+                    border-radius: 6px;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    margin-right: 1px;
+                }
+                &__menu{
+                    width: 110px;
+                    background-color: #fff;
+                }
+            }
+
+        }
+    }
+
+
+    .chat__chat-sms {
+        background-color: rgb(94, 70, 38);
+        flex: 0 1 850px;
     }
 }
