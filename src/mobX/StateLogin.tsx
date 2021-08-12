@@ -1,9 +1,10 @@
 import { makeAutoObservable } from 'mobx';
 
 class StateLogin {
-    isLogin = false;
+    isLogin = true;
     checkedRout = "li-2"
 
+    
     admin = {
         email: 'test@gmail.com',
         password: '12345',
@@ -21,14 +22,16 @@ class StateLogin {
         }
     }
 
+    clickOnLink ( linkId: string ) {
+        this.checkedRout = linkId
+    }
+    
     logOut () {
         this.isLogin = false
         this.checkedRout = "li-2"
     }
 
-    clickOnLink ( linkId: string ) {
-        this.checkedRout = linkId
-    }
+
 
 }
 

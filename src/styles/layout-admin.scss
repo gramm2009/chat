@@ -3,6 +3,7 @@
     height: 100%;
     background: linear-gradient(180deg, #F3F3FB 0%, #FDFBFD 100%);
     display: flex;
+    position: relative;
 
     &__nav {
         width: 290px;
@@ -10,6 +11,9 @@
         padding: 90px 47px 40px;
         min-height: 100vh;
         overflow: hidden;
+        position: fixed;
+        top:0;
+
 
         &__avatar-box {
             height: 200px;
@@ -102,8 +106,17 @@
                     }
                 }
             }
-
-
         }
+    }
+    
+    &__main{
+        padding: 110px 60px 0 60px;
+        background-color: blue;
+        width:  calc(100vw - 290px);
+        height: 100vh;
+        position: absolute;
+        top:0;
+        right: 0;
+        overflow: hidden;
     }
 }
