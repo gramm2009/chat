@@ -1,7 +1,6 @@
-%headerTitleText{  
+%headerTitleText {
     font-size: 18px;
     line-height: 26px;
-    text-transform: capitalize;
     color: #707C97;
 }
 
@@ -19,6 +18,7 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            margin-bottom: 20px;
 
             &__title {
                 h3 {
@@ -37,7 +37,7 @@
             }
 
             &__btn {
-                background:rgba(68, 68, 218, 0.692);
+                background: rgba(68, 68, 218, 0.692);
                 box-shadow: 6px 6px 25px rgba(42, 139, 242, 0.15), 4px 4px 25px rgba(42, 139, 242, 0.05), 10px 6px 25px rgba(42, 139, 242, 0.15);
                 border-radius: 6px;
                 font-size: 20px;
@@ -49,7 +49,7 @@
                 padding: 18px 25px;
                 margin-bottom: 30px;
 
-                &:hover{
+                &:hover {
                     cursor: pointer;
                     background: #0e7ce9;
                 }
@@ -59,8 +59,9 @@
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
-                
-                input{
+                position: relative;
+
+                input {
                     display: inline-block;
                     width: calc(100% - 111px);
                     height: 70px;
@@ -69,10 +70,38 @@
                     border-top-right-radius: 0;
                     border-bottom-right-radius: 0;
                     margin-right: 1px;
+                    outline: none;
+                    padding: 0 45px 0 15px;
+                    @extend %headerTitleText;
+                    
                 }
-                &__menu{
+
+                &__menu {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     width: 110px;
                     background-color: #fff;
+                    border-top-right-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                    cursor: pointer;
+                    @extend %headerTitleText;
+                }
+
+                &__icon {
+                    position: absolute;
+                    top: 23px;
+                    right: 109px;
+                    @extend %headerTitleText;
+
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        background-image: url(../../public/img/Icon/search.svg);
+                        margin-right: 10px;
+                    }
                 }
             }
 
@@ -83,5 +112,9 @@
     .chat__chat-sms {
         background-color: rgb(94, 70, 38);
         flex: 0 1 850px;
+    }
+    
+    .display-none{
+        display: none;
     }
 }
