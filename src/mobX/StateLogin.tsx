@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 
 class StateLogin {
-    isLogin = true;
+    isLogin = false;
     checkedRout = "li-2"
 
     
