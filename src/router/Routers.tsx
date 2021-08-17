@@ -4,7 +4,7 @@ import Chat2 from '../pages/Chat2';
 
 
 
-export const useRouters = ( status: boolean=true ) => {
+export const useRouters = ( status: boolean ) => {
     if ( status ) {
         return (
             <Switch>
